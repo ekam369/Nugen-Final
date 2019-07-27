@@ -1,14 +1,12 @@
 import React from 'react';
 import './App1.css';
 import Sidebar2 from './Sidebar2/Sidebar2';
-import Head2 from './Sidebar/Head2';
 import Head from './Head/Head';
 
 function App() {
   return (
     <div className="App">
       <Head />
-      {/* <Sidebar2 /> */}
       <Sidebar2 />
     </div>
   );

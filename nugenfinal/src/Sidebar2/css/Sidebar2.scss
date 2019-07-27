@@ -1,4 +1,5 @@
 $desk1: 991px;
+$desk2: 1200px;
 $desk1h: 876px;
 $desk2h: 570px;
 $desk3h: 400px;
@@ -6,6 +7,11 @@ $desk4h: 300px;
 $desk5h: 250px;
 @mixin desk1{
     @media (max-width: $desk1){
+        @content;
+    }
+}
+@mixin desk2{
+    @media (min-width: $desk1) and (max-width: $desk2){
         @content;
     }
 }
@@ -42,6 +48,11 @@ $desk5h: 250px;
     overflow-y: scroll;
     background-color:rgb(32,37,65);
     transition: 0.4s ease-in;
+    @include desk2{
+        width: 80px;
+        display: flex;
+        flex-direction: column;
+    }
     @include desk1{
         width: 0;
     }
@@ -62,7 +73,6 @@ $desk5h: 250px;
     }
 
     .tabs-cont{
-        // position: absolute;
         width: 100%;
         height: 70%;
 
@@ -73,6 +83,10 @@ $desk5h: 250px;
             color: rgba(255, 255, 255, 0.609);
             margin-bottom: 20px;
             margin-left: 15px;
+
+            @include desk2{
+                display: none;
+            }
         }
 
         .tab{
@@ -81,12 +95,21 @@ $desk5h: 250px;
             width: 100%;
             height: 47px;
             transition: .2s ease-out;
+            @include desk2{
+                margin-top:20px;
+            }
 
             .ico{
                 margin-left: 25px;
                 margin-right: 15px;
                 font-size: 16px;
                 color: rgba(255, 255, 255, 0.747);
+
+                @include desk2{
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 20px;
+                }
             }
             .tab-tex{
                 position: absolute;
@@ -94,6 +117,10 @@ $desk5h: 250px;
                 margin-left: 60px;
                 font-size: 18px;
                 color: rgba(255, 255, 255, 0.747);
+
+                @include desk2{
+                    display: none;
+                }
             }
         }
         .tab:hover{
