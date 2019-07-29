@@ -1,11 +1,12 @@
 .side-cont {
   position: fixed;
-  width: 281px;
+  width: 280px;
   height: 94%;
   overflow-y: scroll;
   background-color: #202541;
   -webkit-transition: 0.4s ease-in;
   transition: 0.4s ease-in;
+  z-index: 3;
 }
 
 @media (min-width: 991px) and (max-width: 1200px) {
@@ -156,8 +157,8 @@
   height: 47px;
   width: 0;
   background: rgba(255, 255, 255, 0.26);
-  -webkit-transition: .5s ease-out;
-  transition: .5s ease-out;
+  -webkit-transition: .2s ease-out;
+  transition: .2s ease-out;
 }
 
 .side-cont .tabs-cont .tab:hover::after {

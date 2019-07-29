@@ -7,7 +7,9 @@
           align-items: center;
   width: 100%;
   height: 60px;
-  background-color: #202541;
+  background: #fff;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.123) 1px 1px 30px 1px;
+          box-shadow: rgba(0, 0, 0, 0.123) 1px 1px 30px 1px;
 }
 
 .headCont .nugen-template {
@@ -90,5 +92,28 @@
   .headCont .nugen-template .sideMenu {
     display: block;
   }
+}
+
+.headCont .right-side {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 230px;
+  height: 50px;
+  right: 40px;
+  color: rgba(0, 0, 0, 0.281);
+}
+
+.headCont .right-side .photo {
+  width: 30px;
+  height: 30px;
+  background: #dfdfdf;
+  border-radius: 50%;
 }
 /*# sourceMappingURL=Head.css.map */

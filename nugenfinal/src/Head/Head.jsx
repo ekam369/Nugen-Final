@@ -29,6 +29,12 @@ class Head extends Component {
                     </div>
                 </div>
                 </div>
+                <div className="right-side">
+                    <i class="fas fa-bell"></i>
+                    <i class="fas fa-envelope"></i>
+                    <div className="photo"></div>
+                    <i class="fas fa-cog"></i>
+                </div>
             </div>
         );
     }

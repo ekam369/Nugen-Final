@@ -43,11 +43,12 @@ $desk5h: 250px;
 
 .side-cont{
     position: fixed;
-    width: 281px;
+    width: 280px;
     height: 94%;
     overflow-y: scroll;
     background-color:rgb(32,37,65);
     transition: 0.4s ease-in;
+    z-index: 3;
     @include desk2{
         width: 80px;
         display: flex;
@@ -146,7 +147,7 @@ $desk5h: 250px;
             height: 47px;
             width: 0;
             background: rgba(255, 255, 255, 0.26);
-            transition: .5s ease-out;
+            transition: .2s ease-out;
         }
         .tab:hover::after{
             width: 100%;

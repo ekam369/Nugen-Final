@@ -1,0 +1,235 @@
+$desk1: 730px;
+$desk2: 600px;
+$desk3: 500px;
+$desk4: 450px;
+$desk5: 380px;
+$desk6: 310px;
+$desk7: 237px;
+$desk1w: 1200px;
+$desk2w: 991px;
+$desk3w: 962px;
+
+@mixin desk1{
+    @media (max-height: $desk1) {
+        @content;
+    }
+}
+@mixin desk1w{
+    @media (max-width: $desk1w) {
+        @content;
+    }
+}
+@mixin desk2{
+    @media (max-height: $desk2) {
+        @content;
+    }
+}
+@mixin desk2w{
+    @media (max-width: $desk2w) {
+        @content;
+    }
+}
+@mixin desk3{
+    @media (max-height: $desk3) {
+        @content;
+    }
+}
+@mixin desk3w{
+    @media (max-width: $desk3w) {
+        @content;
+    }
+}
+@mixin desk4{
+    @media (max-height: $desk4) {
+        @content;
+    }
+}
+@mixin desk5{
+    @media (max-height: $desk5) {
+        @content;
+    }
+}
+@mixin desk6{
+    @media (max-height: $desk6) {
+        @content;
+    }
+}
+@mixin desk7{
+    @media (max-height: $desk7) {
+        @content;
+    }
+}
+
+.assign-box{
+    position: absolute;
+    display: flex;
+    width: 85%;
+    height: 100%;
+    margin-left: 280px;
+
+    @include desk1{
+        height: 96%;
+    }
+    @include desk1w{
+        margin-left: 90px;
+        width: 92%;
+    }
+    @include desk2w{
+        margin-left: 0px;
+        width: 100%;
+    }
+    @include desk3w{
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0px;
+        width: 100%;
+    }
+    @include desk2{
+        height: 94%;
+    }
+    @include desk3{
+        height: 91%;
+    }
+    @include desk4{
+        height: 88%;
+    }
+    @include desk5{
+        height: 83%;
+    }
+    @include desk6{
+        height: 70%;
+    }
+    @include desk7{
+        height: 60%;
+    }
+
+    .assign-cont{
+        overflow-y: scroll;
+        width: 65%;
+        height: 85%;
+        margin-top: 18px;
+        margin-left: 14px;
+        background: #fff;
+        padding: 20px;
+        box-shadow: rgba(0, 0, 0, 0.274) 2px 4px 20px 2px;
+        transition: 0.5s;
+
+        @include desk1w{
+            width: 75%;
+        }
+        @include desk3w{
+            width: 93%;
+            height: 80%;
+        }
+
+        // animation: mov 2s ease-out;
+    
+        .assi-tex{
+            font-size: 16px;
+            font-weight: bold;
+            color: rgba(0, 0, 0, 0.568);
+        }
+        .bt-search{
+    
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+    
+            .bt-add{
+                display: inline-block;
+                padding: 13px 19px;
+                color: #fff;
+                border-radius: 8px;
+                background: #fc007d;    
+                font-weight: bold;
+                font-size: 13px;
+            }
+            .search{
+                display: flex;
+                padding-left: 10px;
+                align-items: center;
+                width: 160px;
+                outline: none;
+                border-radius: 6px;
+            }
+        }
+    
+        .assign-tables{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 40px;
+            width: 98.5%;
+            padding-left: 10px;
+            padding-right: 10px;
+            background-color:rgb(32,37,65);
+            height: 50px;
+            border-radius: 20px;
+            color: rgba(255, 255, 255, 0.856);
+            font-weight: bold;
+            margin-bottom: 20px;
+    
+            .head-tex{
+                display: flex;
+                justify-content: center;
+                width: 150px;
+            }
+        }
+        .content{
+            width: 98.5%;
+            padding-left: 10px;
+            padding-right: 10px;
+            height: auto;
+            display: flex;
+            justify-content: space-between;
+    
+            .cont-tex{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 150px;
+                height: 50px;
+                font-weight: bold;
+                color: rgba(32, 37, 65, 0.808);
+    
+                .sub{
+                    display: inline-block;
+                    border-radius: 5px;
+                    padding: 6px 30px;
+                    height: 40%;
+                    color: #fff;
+    
+                }
+                .success{
+                    background: #00ff4c;
+                }
+                .success5{
+                    background: #ff744d;
+                }
+                .success10{
+                    background: #ffbf00;
+                }
+                .success15{
+                    background: #18bff6;
+                }
+            }
+            
+        }
+    
+    }
+    
+}
+::-webkit-scrollbar{
+    background: rgba(0, 0, 0, 0.109);
+    height: 60%;
+    width: 4px;
+}
+
+@keyframes mov{
+    0%{
+        transform: rotateY(0deg);
+    }
+    100%{
+        transform: rotatey(180deg);
+    }
+}
