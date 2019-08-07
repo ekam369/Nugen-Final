@@ -1,0 +1,158 @@
+.inp-cont {
+    position: absolute;
+    width: 82%;
+    height: 86%;
+    margin-top: 15px;
+    margin-left: 291px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.678);
+
+    .anim {
+        animation: mov 0.5s ease-out;
+    }
+
+    .exp-inp-box {
+        width: 20%;
+        height: 92%;
+        margin: 20px auto;
+        padding: 15px;
+        background: #fff;
+        
+        .exp-inp-cont {
+            width: 100%;
+            height: 100%;
+            border: rgba(0, 0, 0, 0.205) solid 2px;
+            border-radius: 10px;
+
+            .cross-cont {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                width: 100%;
+
+                .cross {
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 50%;
+                    font-size: 40px;
+                    font-weight: 100;
+                    background-image: url("../../Assets/53804.png");
+                    background-size: 100% 100%;
+                    background-repeat: no-repeat;
+                }   
+            }
+
+            .inp-up-cont {
+                display: flex;
+                padding-top: 10px;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 40px;
+                color: #000;
+                font-size: 30px;
+                font-family: "Raleway";
+            }
+    
+            .inp-details-cont {
+                overflow-y: scroll;
+                width: 100%;
+                height: 89%;
+                // background: #000;
+        
+                .inp-details-box {
+                    margin-top: 30px;
+                    display: flex;
+                    flex-direction: column;
+                    padding-left: 30px;
+
+                    .detail-box {
+                        display: flex;
+                        flex-direction: column;
+                        margin-left: -13px;
+                        margin-bottom: 30px;
+                    }
+        
+                    .inp-submit-btn {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 100px;
+                        height: 15px;
+                        background: #4064f6;
+                        padding: 18px 20px;
+                        margin: 15px 120px;
+                        color: #fff;
+                        border-radius: 10px;
+                    }
+                }
+            }
+            select {
+                padding: 10px;
+                margin-top: 10px;
+                border: rgba(0, 0, 0, 0.541) solid 1px;
+                outline: none;
+                font-size: 18px;
+                width: 270px;
+                background: none;
+                color: rgba(41, 41, 41, 0.493);
+                transition: 0.3s;
+                border-radius: 10px;
+            }
+            select:focus {
+                color: #000;
+            }
+
+        
+            input {
+                padding: 10px;
+                margin-top: 10px;
+                border: rgba(0, 0, 0, 0.541) solid 1px;
+                outline: none;
+                font-size: 18px;
+                width: 250px;
+                background: none;
+                color: rgb(41, 41, 41);
+                transition: 0.3s;
+                border-radius: 10px;
+            }
+            label {
+                font-size: 17px;
+                font-weight: 100;
+                font-family: "poppins";
+                color: rgba(0, 0, 0, 0.698);
+            }
+            // input:focus {
+            //     width: 240px;
+            //     border-bottom: #4064f6 solid 2px;
+            // }
+        }
+
+    }
+}
+::-webkit-scrollbar {
+    width: 0;
+}
+::placeholder {
+    font-size: 17px;    
+    color: rgb(131, 130, 130);       
+}
+
+@keyframes mov {
+    0% {
+        margin: 0 auto; 
+        transform: scale(0.2);
+    }
+    10% {
+        margin: 200px auto;
+        transform: scale(0.2);
+    }
+    20% {
+        margin-top: 10px auto;
+        transform: scale(0.5);
+    }
+    100% {
+        margin-top: 20px auto;
+        transform: scale(1);
+    }
+}

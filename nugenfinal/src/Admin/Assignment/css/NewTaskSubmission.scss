@@ -5,6 +5,7 @@ $desk4w: 1500px;
 $desk5w: 1330px;
 $desk6w: 1228px;
 $desk7w: 1200px;
+$desk7mw: 1199px;
 $desk8w: 962px;
 $desk9w: 550px;
 
@@ -40,6 +41,11 @@ $desk9w: 550px;
 }
 @mixin desk7w {
     @media(max-width: $desk7w) {
+        @content;
+    }
+}
+@mixin desk7mw {
+    @media(max-width: $desk7mw) {
         @content;
     }
 }
@@ -81,16 +87,14 @@ $desk9w: 550px;
         width: 18%;
     }
     @include desk7w{
-        width: 20%;
+        display: none;
     }
-    @include desk8w{
-        width: 92%;
+    @include desk7mw{
+        position: absolute;
+        right: 0;
+        width: 300px;
     }
-    @include desk9w{
-        width: 92%;
-    }
-
-
+    
         .newTex{
             padding-top: 20px;
             width: 100%;
@@ -99,21 +103,6 @@ $desk9w: 550px;
             color: rgba(0, 0, 0, 0.5);
             background: #fff;
 
-            @include desk2w{
-                width: 24%;
-            }
-            @include desk4w{
-                width: 21%;
-            }
-            @include desk5w{
-                width: 18%;
-            }
-            @include desk8w{
-                width: 40%;
-            }
-            @include desk9w{
-                width: 50%;
-            }
         }
 
         .submissions-cont{
@@ -124,6 +113,16 @@ $desk9w: 550px;
             height: auto;
             padding-top: 20px;
             margin-top: 20px;
+            transform-origin: 50% 0%;
+            @include desk2w{
+                transform: scale(0.9);
+            }
+            @include desk5w{
+                transform: scale(0.8);
+            }
+            @include desk7mw {
+                transform: scale(1);
+            }
 
             .total-submissions{
                 width: 40px;

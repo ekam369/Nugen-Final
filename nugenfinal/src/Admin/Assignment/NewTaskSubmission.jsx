@@ -4,7 +4,7 @@ import './css/NewTaskSubmission.css';
 class NewTaskSubmission extends Component {
     render() { 
         return (  
-            <div className="newTask-cont">
+            <div id="newCont" className="newTask-cont">
                 <div className="newTex">New Task Submissions</div>
                 
                 <div className="submissions-cont">

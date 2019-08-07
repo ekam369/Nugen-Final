@@ -1,0 +1,230 @@
+.inp-cont {
+  position: absolute;
+  width: 82%;
+  height: 86%;
+  margin-top: 15px;
+  margin-left: 291px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.678);
+}
+
+.inp-cont .anim {
+  -webkit-animation: mov 0.5s ease-out;
+          animation: mov 0.5s ease-out;
+}
+
+.inp-cont .exp-inp-box {
+  width: 20%;
+  height: 92%;
+  margin: 20px auto;
+  padding: 15px;
+  background: #fff;
+}
+
+.inp-cont .exp-inp-box .exp-inp-cont {
+  width: 100%;
+  height: 100%;
+  border: rgba(0, 0, 0, 0.205) solid 2px;
+  border-radius: 10px;
+}
+
+.inp-cont .exp-inp-box .exp-inp-cont .cross-cont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.inp-cont .exp-inp-box .exp-inp-cont .cross-cont .cross {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  font-size: 40px;
+  font-weight: 100;
+  background-image: url("../../Assets/53804.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.inp-cont .exp-inp-box .exp-inp-cont .inp-up-cont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 10px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 40px;
+  color: #000;
+  font-size: 30px;
+  font-family: "Raleway";
+}
+
+.inp-cont .exp-inp-box .exp-inp-cont .inp-details-cont {
+  overflow-y: scroll;
+  width: 100%;
+  height: 89%;
+}
+
+.inp-cont .exp-inp-box .exp-inp-cont .inp-details-cont .inp-details-box {
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-left: 30px;
+}
+
+.inp-cont .exp-inp-box .exp-inp-cont .inp-details-cont .inp-details-box .detail-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: -13px;
+  margin-bottom: 30px;
+}
+
+.inp-cont .exp-inp-box .exp-inp-cont .inp-details-cont .inp-details-box .inp-submit-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100px;
+  height: 15px;
+  background: #4064f6;
+  padding: 18px 20px;
+  margin: 15px 120px;
+  color: #fff;
+  border-radius: 10px;
+}
+
+.inp-cont .exp-inp-box .exp-inp-cont select {
+  padding: 10px;
+  margin-top: 10px;
+  border: rgba(0, 0, 0, 0.541) solid 1px;
+  outline: none;
+  font-size: 18px;
+  width: 270px;
+  background: none;
+  color: rgba(41, 41, 41, 0.493);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  border-radius: 10px;
+}
+
+.inp-cont .exp-inp-box .exp-inp-cont select:focus {
+  color: #000;
+}
+
+.inp-cont .exp-inp-box .exp-inp-cont input {
+  padding: 10px;
+  margin-top: 10px;
+  border: rgba(0, 0, 0, 0.541) solid 1px;
+  outline: none;
+  font-size: 18px;
+  width: 250px;
+  background: none;
+  color: #292929;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  border-radius: 10px;
+}
+
+.inp-cont .exp-inp-box .exp-inp-cont label {
+  font-size: 17px;
+  font-weight: 100;
+  font-family: "poppins";
+  color: rgba(0, 0, 0, 0.698);
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+::-webkit-input-placeholder {
+  font-size: 17px;
+  color: #838282;
+}
+
+:-ms-input-placeholder {
+  font-size: 17px;
+  color: #838282;
+}
+
+::-ms-input-placeholder {
+  font-size: 17px;
+  color: #838282;
+}
+
+::placeholder {
+  font-size: 17px;
+  color: #838282;
+}
+
+@-webkit-keyframes mov {
+  0% {
+    margin: 0 auto;
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+  }
+  10% {
+    margin: 200px auto;
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+  }
+  20% {
+    margin-top: 10px auto;
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  100% {
+    margin-top: 20px auto;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes mov {
+  0% {
+    margin: 0 auto;
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+  }
+  10% {
+    margin: 200px auto;
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+  }
+  20% {
+    margin-top: 10px auto;
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  100% {
+    margin-top: 20px auto;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+/*# sourceMappingURL=ExpenditureInput.css.map */

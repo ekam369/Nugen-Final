@@ -21,6 +21,7 @@ class Head extends Component {
         return (  
             <div className="headCont">
                 <div className="nugen-template">
+                    <div className="nugen-tex">Nugen</div>
                 <div onClick={this.show} className="sideMenu">
                     <div id="nav-icon1">
                         <span></span>
@@ -30,10 +31,10 @@ class Head extends Component {
                 </div>
                 </div>
                 <div className="right-side">
-                    <i class="fas fa-bell"></i>
-                    <i class="fas fa-envelope"></i>
+                    <i className="fas fa-bell"></i>
+                    <i className="fas fa-envelope"></i>
                     <div className="photo"></div>
-                    <i class="fas fa-cog"></i>
+                    <i className="fas fa-cog"></i>
                 </div>
             </div>
         );

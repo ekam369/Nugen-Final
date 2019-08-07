@@ -8,6 +8,11 @@ $desk7: 237px;
 $desk1w: 1200px;
 $desk2w: 991px;
 $desk3w: 962px;
+$desk4w: 710px;
+$desk5w: 500px;
+$desk6w: 430px;
+$desk61w: 340px;
+$desk7w: 1120px;
 
 @mixin desk1{
     @media (max-height: $desk1) {
@@ -44,8 +49,18 @@ $desk3w: 962px;
         @content;
     }
 }
+@mixin desk4w{
+    @media (max-width: $desk4w) {
+        @content;
+    }
+}
 @mixin desk5{
     @media (max-height: $desk5) {
+        @content;
+    }
+}
+@mixin desk5w{
+    @media (max-width: $desk5w) {
         @content;
     }
 }
@@ -54,76 +69,64 @@ $desk3w: 962px;
         @content;
     }
 }
+@mixin desk6w{
+    @media (max-width: $desk6w) {
+        @content;
+    }
+}
+@mixin desk61w{
+    @media (max-width: $desk6w) {
+        @content;
+    }
+}
 @mixin desk7{
     @media (max-height: $desk7) {
         @content;
     }
 }
-
-.assign-box{
-    position: absolute;
-    display: flex;
-    width: 85%;
-    height: 100%;
-    margin-left: 280px;
-
-    @include desk1{
-        height: 96%;
+@mixin desk7w{
+    @media (max-width: $desk7w) {
+        @content;
     }
+}
+
+
+.assign-cont{
+    overflow-y: scroll;
+    width: 65%;
+    height: 85%;
+    margin-top: 18px;
+    margin-left: 14px;
+    background: #fff;
+    padding: 20px;
+    box-shadow: rgba(0, 0, 0, 0.274) 2px 4px 20px 2px;
+    transition: 0.5s;
+    
+    display: none;
+
     @include desk1w{
-        margin-left: 90px;
-        width: 92%;
-    }
-    @include desk2w{
-        margin-left: 0px;
-        width: 100%;
+        width: 93%;
     }
     @include desk3w{
-        flex-direction: column;
-        align-items: center;
-        margin-left: 0px;
-        width: 100%;
+        width: 93%;
+        height: 80%;
     }
-    @include desk2{
-        height: 94%;
+    @include desk4w{
+        font-size: 12px;
     }
-    @include desk3{
-        height: 91%;
+    @include desk5w{
+        font-size: 10px;
     }
-    @include desk4{
-        height: 88%;
+    @include desk6w{
+        font-size: 8px;
     }
-    @include desk5{
-        height: 83%;
-    }
-    @include desk6{
-        height: 70%;
-    }
-    @include desk7{
-        height: 60%;
+    @include desk61w{
+        font-size: 6px;
     }
 
-    .assign-cont{
-        overflow-y: scroll;
-        width: 65%;
-        height: 85%;
-        margin-top: 18px;
-        margin-left: 14px;
-        background: #fff;
-        padding: 20px;
-        box-shadow: rgba(0, 0, 0, 0.274) 2px 4px 20px 2px;
-        transition: 0.5s;
+    .content-cont{
+        // display: none;
 
-        @include desk1w{
-            width: 75%;
-        }
-        @include desk3w{
-            width: 93%;
-            height: 80%;
-        }
-
-        // animation: mov 2s ease-out;
-    
         .assi-tex{
             font-size: 16px;
             font-weight: bold;
@@ -143,6 +146,13 @@ $desk3w: 962px;
                 background: #fc007d;    
                 font-weight: bold;
                 font-size: 13px;
+
+                @include desk4w {
+                    font-size: 11px;
+                }
+                @include desk5w {
+                    font-size: 8px;
+                }
             }
             .search{
                 display: flex;
@@ -151,6 +161,13 @@ $desk3w: 962px;
                 width: 160px;
                 outline: none;
                 border-radius: 6px;
+
+                @include desk4w {
+                    width: 130px;
+                }
+                @include desk5w {
+                    width: 110px;
+                }
             }
         }
     
@@ -198,6 +215,19 @@ $desk3w: 962px;
                     padding: 6px 30px;
                     height: 40%;
                     color: #fff;
+
+                    @include desk4w {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;    
+                        padding: 3px 25px;
+                    }
+                    @include desk5w {
+                        padding: 3px 20px;
+                    }
+                    @include desk6w {
+                        padding: 3px 15px;
+                    }
     
                 }
                 .success{
@@ -214,22 +244,7 @@ $desk3w: 962px;
                 }
             }
             
-        }
-    
+        }   
     }
-    
-}
-::-webkit-scrollbar{
-    background: rgba(0, 0, 0, 0.109);
-    height: 60%;
-    width: 4px;
-}
 
-@keyframes mov{
-    0%{
-        transform: rotateY(0deg);
-    }
-    100%{
-        transform: rotatey(180deg);
-    }
 }

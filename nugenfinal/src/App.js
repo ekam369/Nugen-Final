@@ -2,14 +2,18 @@ import React from 'react';
 import './App1.css';
 import Sidebar2 from './Sidebar2/Sidebar2';
 import Head from './Head/Head';
-import Assignment from './Assignment/Assignment';
+import Expenditure from './Admin/Expenditure/Expenditure';
+// import AAssignment from './Admin/Assignment/Assignment';
+// import SAssignment from './Student Assignment/Assignment'
 
 function App() {
   return (
     <div className="App">
       <Head />
       <Sidebar2 />
-      <Assignment />
+      <Expenditure />
+      {/* <AAssignment /> */}
+      {/* <SAssignment /> */}
     </div>
   );
 }
