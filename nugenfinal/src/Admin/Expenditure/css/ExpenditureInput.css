@@ -1,20 +1,25 @@
 .inp-cont {
   position: absolute;
-  width: 82%;
-  height: 86%;
-  margin-top: 15px;
-  margin-left: 291px;
+  margin-top: -60px;
+  z-index: 100;
+  width: 100%;
+  height: 96%;
   padding: 20px;
-  background: rgba(0, 0, 0, 0.678);
+  background: rgba(0, 0, 0, 0.76);
 }
 
-.inp-cont .anim {
-  -webkit-animation: mov 0.5s ease-out;
-          animation: mov 0.5s ease-out;
+.inp-cont .animOpen {
+  -webkit-animation: mov 0.6s ease-out;
+          animation: mov 0.6s ease-out;
+}
+
+.inp-cont .animClose {
+  -webkit-animation: movRev 0.6s ease-out;
+          animation: movRev 0.6s ease-out;
 }
 
 .inp-cont .exp-inp-box {
-  width: 20%;
+  width: 23%;
   height: 92%;
   margin: 20px auto;
   padding: 15px;
@@ -29,6 +34,7 @@
 }
 
 .inp-cont .exp-inp-box .exp-inp-cont .cross-cont {
+  cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -42,8 +48,8 @@
 }
 
 .inp-cont .exp-inp-box .exp-inp-cont .cross-cont .cross {
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
   border-radius: 50%;
   font-size: 40px;
   font-weight: 100;
@@ -66,18 +72,24 @@
   width: 100%;
   height: 40px;
   color: #000;
-  font-size: 30px;
+  font-size: 36px;
   font-family: "Raleway";
 }
 
 .inp-cont .exp-inp-box .exp-inp-cont .inp-details-cont {
-  overflow-y: scroll;
   width: 100%;
-  height: 89%;
+  height: 88%;
+}
+
+@media (max-height: 668px) {
+  .inp-cont .exp-inp-box .exp-inp-cont .inp-details-cont {
+    overflow-y: scroll;
+    height: 85%;
+  }
 }
 
 .inp-cont .exp-inp-box .exp-inp-cont .inp-details-cont .inp-details-box {
-  margin-top: 30px;
+  margin-top: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -97,10 +109,11 @@
       -ms-flex-direction: column;
           flex-direction: column;
   margin-left: -13px;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 .inp-cont .exp-inp-box .exp-inp-cont .inp-details-cont .inp-details-box .inp-submit-btn {
+  cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -110,13 +123,14 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100px;
-  height: 15px;
+  width: 170px;
+  height: 54px;
   background: #4064f6;
-  padding: 18px 20px;
-  margin: 15px 120px;
+  outline: none;
+  margin: 50px 205px;
   color: #fff;
   border-radius: 10px;
+  font-size: 18px;
 }
 
 .inp-cont .exp-inp-box .exp-inp-cont select {
@@ -125,7 +139,7 @@
   border: rgba(0, 0, 0, 0.541) solid 1px;
   outline: none;
   font-size: 18px;
-  width: 270px;
+  width: 91%;
   background: none;
   color: rgba(41, 41, 41, 0.493);
   -webkit-transition: 0.3s;
@@ -143,7 +157,7 @@
   border: rgba(0, 0, 0, 0.541) solid 1px;
   outline: none;
   font-size: 18px;
-  width: 250px;
+  width: 86%;
   background: none;
   color: #292929;
   -webkit-transition: 0.3s;
@@ -152,7 +166,7 @@
 }
 
 .inp-cont .exp-inp-box .exp-inp-cont label {
-  font-size: 17px;
+  font-size: 19px;
   font-weight: 100;
   font-family: "poppins";
   color: rgba(0, 0, 0, 0.698);
@@ -160,6 +174,7 @@
 
 ::-webkit-scrollbar {
   width: 0;
+  height: 0;
 }
 
 ::-webkit-input-placeholder {
@@ -184,22 +199,10 @@
 
 @-webkit-keyframes mov {
   0% {
-    margin: 0 auto;
-    -webkit-transform: scale(0.2);
-            transform: scale(0.2);
-  }
-  10% {
-    margin: 200px auto;
-    -webkit-transform: scale(0.2);
-            transform: scale(0.2);
-  }
-  20% {
-    margin-top: 10px auto;
-    -webkit-transform: scale(0.5);
-            transform: scale(0.5);
+    -webkit-transform: scale(0);
+            transform: scale(0);
   }
   100% {
-    margin-top: 20px auto;
     -webkit-transform: scale(1);
             transform: scale(1);
   }
@@ -207,24 +210,34 @@
 
 @keyframes mov {
   0% {
-    margin: 0 auto;
-    -webkit-transform: scale(0.2);
-            transform: scale(0.2);
-  }
-  10% {
-    margin: 200px auto;
-    -webkit-transform: scale(0.2);
-            transform: scale(0.2);
-  }
-  20% {
-    margin-top: 10px auto;
-    -webkit-transform: scale(0.5);
-            transform: scale(0.5);
+    -webkit-transform: scale(0);
+            transform: scale(0);
   }
   100% {
-    margin-top: 20px auto;
     -webkit-transform: scale(1);
             transform: scale(1);
+  }
+}
+
+@-webkit-keyframes movRev {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+@keyframes movRev {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(0);
+            transform: scale(0);
   }
 }
 /*# sourceMappingURL=ExpenditureInput.css.map */
