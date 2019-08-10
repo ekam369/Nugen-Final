@@ -1,5 +1,5 @@
 $desk1h : 857px;
-$desk1w : 1372px;
+$desk1w : 1547px;
 $desk2h : 622px;
 $desk2w : 1122px;
 $desk3h : 500px;
@@ -58,9 +58,9 @@ $desk4h : 420px;
     }
 
     .exp-inp-box {
-        width: 24%;
-        height: 92%;
-        margin: 20px auto;
+        width: 20%;
+        height: 65%;
+        margin: 150px auto;
         padding: 15px;
         background: #fff;
 
@@ -72,6 +72,9 @@ $desk4h : 420px;
         }
         @include desk4h {
             height: 83%;
+        }
+        @include desk1w {
+            width: 25%;
         }
         @include desk2w {
             width: 350px;
@@ -114,7 +117,7 @@ $desk4h : 420px;
                 width: 100%;
                 height: 40px;
                 color: #000;
-                font-size: 36px;
+                font-size: 34px;
                 font-family: "Raleway";
 
                 @include desk1w {
@@ -145,7 +148,7 @@ $desk4h : 420px;
                 }
 
                 .inp-details-box {
-                    margin-top: 50px;
+                    margin-top: 80px;
                     display: flex;
                     flex-direction: column;
                     padding-left: 30px;
@@ -166,7 +169,7 @@ $desk4h : 420px;
                         height: 54px;
                         background: #4064f6;
                         outline: none;
-                        margin: 50px 48%;
+                        margin: 80px 48%;
                         color: #fff;
                         border-radius: 10px;
                         font-size: 18px;

@@ -58,9 +58,9 @@ $desk4h : 420px;
     }
 
     .exp-inp-box {
-        width: 24%;
-        height: 92%;
-        margin: 20px auto;
+        width: 22%;
+        height: 80%;
+        margin: 80px auto;
         padding: 15px;
         background: #fff;
 
@@ -72,6 +72,9 @@ $desk4h : 420px;
         }
         @include desk4h {
             height: 83%;
+        }
+        @include desk1w {
+            width: 25%;
         }
         @include desk2w {
             width: 350px;

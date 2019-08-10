@@ -4,8 +4,22 @@ import './css/ExpenditureInput.css';
 
 class ExpInpContainer extends Component {
 
-    close = (e) => {
-        e.preventDefault();
+    state = {
+        paid_by: '',
+        description: '',
+        mode_of_payment: '',
+        from_account_of: '',
+        amount: 0 
+    }
+
+    handleInput = (e) => {
+        this.setState({
+            [e.target.name]: e.target.value
+        })
+    }
+
+    showInp = () => {
+        console.log(this.state);
     }
 
     render() { 
@@ -15,15 +29,15 @@ class ExpInpContainer extends Component {
                     <form >
                         <div className="detail-box">
                             <label>PAID BY</label>
-                            <input type="text" name="name" placeholder="Paid By" required/>
+                            <input onChange={this.handleInput} type="text" name="paid_by" placeholder="Paid By" required/>
                         </div>
                         <div className="detail-box">
                             <label>Description</label>
-                            <input type="text" name="desc" placeholder="Description" required/>
+                            <input onChange={this.handleInput} type="text" name="description" placeholder="Description" required/>
                         </div>
                         <div className="detail-box">
                             <label>Mode Of Payment</label>
-                                <select id="mode" required>
+                                <select onChange={this.handleInput} name="mode_of_payment" id="mode" required>
                                 <option value="">Mode Of Payment</option>
                                 <option value="cash">Cash</option>
                                 <option value="cheque">Cheque</option>
@@ -34,13 +48,13 @@ class ExpInpContainer extends Component {
                         </div>
                         <div className="detail-box">
                             <label>From Account Of</label>
-                            <input type="text" placeholder="From Account of" required/>
+                            <input onChange={this.handleInput} type="text" name="from_account_of" placeholder="From Account of" required/>
                         </div>
                         <div className="detail-box">
                             <label>Amount</label>
-                            <input type="text" placeholder="Amount" required/>
+                            <input onChange={this.handleInput} type="number" name="amount" placeholder="Amount" required/>
                         </div>
-                        <button onClick={this.props.makeClose} className="inp-submit-btn" type="submit">Add Details</button>
+                        <button onClick={this.showInp} className="inp-submit-btn" type="submit">Add Details</button>
                     </form>
                 </div>
             </div>
