@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './css/Batches.css';
 import BatchInput from './BatchInput';
+import Sidebar2 from '../../Sidebar2/Sidebar2';
+import Head from '../../Head/Head';
 
 class Batches extends Component {
 
@@ -23,6 +25,8 @@ class Batches extends Component {
     render() { 
         return (  
             <div>
+                <Head />
+                <Sidebar2 />
                 <div className="batch-cont">
                     <div className="up-cont">
                         <div className="assi-tex">Batches</div>

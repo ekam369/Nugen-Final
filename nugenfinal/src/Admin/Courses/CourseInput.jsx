@@ -5,7 +5,7 @@ import CourseInpContainer from './CourseInpContainer';
 class CourseInput extends Component {
     
     state = {
-        closed: false
+        closed: false,
     }
 
     close = () => {
@@ -26,7 +26,7 @@ class CourseInput extends Component {
 
     render() { 
         return (  
-            <div className="inp-cont "
+            <div className="course-inp-cont "
              style={
                 this.props.show ? {display:"block"} : {display:"none"}}>
                 

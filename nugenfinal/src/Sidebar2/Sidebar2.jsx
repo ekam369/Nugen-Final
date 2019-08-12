@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Link } from 'react-router-dom';
 import './css/Sidebar2.css';
 
 class Sidebar2 extends Component {
@@ -8,9 +9,9 @@ class Sidebar2 extends Component {
                 <div id="side-cont" className="side-cont">
                     <div className="tabs-cont">
                         <div className="head-tex">Main Apps</div>
-                        <div className="tab">
+                        <div className="tab tab-selected">
                             <i className="fas fa-tachometer-alt ico"></i>
-                            <div className="tab-tex">Dashboard</div>
+                            <div className="tab-tex"><Link className="link link-selected" to="/dashboard">Dashboard</Link></div>
                         </div>
                         <div className="tab">
                             <i className="far fa-calendar-check ico"></i>
@@ -21,11 +22,17 @@ class Sidebar2 extends Component {
                             <div className="tab-tex">News Feed</div>
                         </div>
                         <div className="tab">
+                            <i className="fas fa-user-friends ico"></i>
+                            <div className="tab-tex"><Link className="link" to="/expenditure">Expenditures</Link></div>
+                        </div>
+                        <div className="tab">
                             <i className="fas fa-print ico"></i>
                             <div className="tab-tex">Invoices</div>
                         </div>
 
+                        
                         <div className="head-tex">Student Details</div>
+                        
                         <div className="tab">
                             <i className="fas fa-user ico"></i>
                             <div className="tab-tex">Admissions</div>
@@ -36,15 +43,19 @@ class Sidebar2 extends Component {
                         </div>
                         <div className="tab">
                             <i className="fas fa-user-friends ico"></i>
-                            <div className="tab-tex">Batches</div>
+                            <div className="tab-tex"><Link className="link" to="/batches">Batches</Link></div>
                         </div>
                         <div className="tab">
                             <i className="fas fa-user ico"></i>
                             <div className="tab-tex">Attendance</div>
                         </div>
                         <div className="tab">
+                            <i className="fas fa-user-friends ico"></i>
+                            <div className="tab-tex"><Link className="link" to="/courses">Courses</Link></div>
+                        </div>
+                        <div className="tab">
                             <i className="fas fa-book-open ico"></i>
-                            <div className="tab-tex">Assignments</div>
+                            <div className="tab-tex"><Link className="link" to="/assignment">Assignments</Link></div>
                         </div>
                         <div className="tab">
                             <i className="fas fa-bible ico"></i>
@@ -68,7 +79,6 @@ class Sidebar2 extends Component {
 
                     
                 </div>
-                
             </div>
         );
     }

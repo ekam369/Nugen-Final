@@ -35,7 +35,7 @@ $desk4: 360px;
     transition: 0.5s;
     overflow-y: scroll;
 
-    // display: none;
+    display: none;
 
     @include desk1 {
         width: 100%;

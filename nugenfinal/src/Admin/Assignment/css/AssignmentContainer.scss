@@ -102,7 +102,7 @@ $desk7w: 1120px;
     box-shadow: rgba(0, 0, 0, 0.274) 2px 4px 20px 2px;
     transition: 0.5s;
     
-    display: none;
+    // display: none;
 
     @include desk1w{
         width: 93%;
@@ -139,6 +139,7 @@ $desk7w: 1120px;
             margin-top: 40px;
     
             .bt-add{
+                cursor: pointer;
                 display: inline-block;
                 padding: 13px 19px;
                 color: #fff;

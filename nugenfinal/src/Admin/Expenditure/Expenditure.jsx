@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './css/Expenditure.css';
 import ExpenditureInput from './ExpenditureInput';
+import Sidebar2 from '../../Sidebar2/Sidebar2';
+import Head from '../../Head/Head';
 
 class Expenditure extends Component {
 
@@ -23,6 +25,8 @@ class Expenditure extends Component {
     render() { 
         return (
             <div>
+                <Head />
+                <Sidebar2 />
                 <div className="exp-cont">
                     <div className="up-cont">
                         <div className="assi-tex">Expenditures</div>

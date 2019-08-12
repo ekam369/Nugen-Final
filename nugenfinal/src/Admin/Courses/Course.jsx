@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import CourseInput from './CourseInput';
 import './css/Course.css';
+import Sidebar2 from '../../Sidebar2/Sidebar2';
+import Head from '../../Head/Head';
 
 class Course extends Component {
     
@@ -23,9 +25,11 @@ class Course extends Component {
     render() { 
         return (  
             <div>
+                <Head />
+                <Sidebar2 />
                 <div className="course-cont">
                     <div className="up-cont">
-                        <div className="assi-tex">Batches</div>
+                        <div className="assi-tex">Courses</div>
                         <div className="bt-search">
                             <div onClick={this.showExpInp} className="bt-add">
                                 <i className="fas fa-plus-circle"></i>&nbsp;

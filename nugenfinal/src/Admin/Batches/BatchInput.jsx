@@ -26,7 +26,7 @@ class BatchInput extends Component {
 
     render() { 
         return (  
-            <div className="inp-cont "
+            <div className="batch-inp-cont "
              style={
                 this.props.show ? {display:"block"} : {display:"none"}}>
                 

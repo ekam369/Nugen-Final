@@ -10,6 +10,7 @@
   -webkit-transition: 0.5s;
   transition: 0.5s;
   overflow-y: scroll;
+  display: none;
 }
 
 @media (max-width: 1200px) {

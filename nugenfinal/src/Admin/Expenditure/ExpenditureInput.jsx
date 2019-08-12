@@ -26,7 +26,7 @@ class ExpenditureInput extends Component {
 
     render() { 
         return (  
-            <div className="inp-cont "
+            <div className="expend-inp-cont "
              style={
                 this.props.show ? {display:"block"} : {display:"none"}}>
                 

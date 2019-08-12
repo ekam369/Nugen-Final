@@ -179,6 +179,7 @@
 }
 
 .exp-cont .up-cont .bt-search .bt-add {
+  cursor: pointer;
   display: inline-block;
   padding: 13px 19px;
   color: #fff;

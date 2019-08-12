@@ -10,7 +10,6 @@
           box-shadow: rgba(0, 0, 0, 0.274) 2px 4px 20px 2px;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  display: none;
 }
 
 @media (max-width: 1200px) {
@@ -67,6 +66,7 @@
 }
 
 .assign-cont .content-cont .bt-search .bt-add {
+  cursor: pointer;
   display: inline-block;
   padding: 13px 19px;
   color: #fff;
