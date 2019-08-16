@@ -148,6 +148,11 @@ $desk7w: 1120px;
                 font-weight: bold;
                 font-size: 13px;
 
+                .link {
+                    text-decoration: none;
+                    color: #fff;
+                }
+
                 @include desk4w {
                     font-size: 11px;
                 }
@@ -211,10 +216,12 @@ $desk7w: 1120px;
                 color: rgba(32, 37, 65, 0.808);
     
                 .sub{
-                    display: inline-block;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 50%;
+                    height: 50%;
                     border-radius: 5px;
-                    padding: 6px 30px;
-                    height: 40%;
                     color: #fff;
 
                     @include desk4w {

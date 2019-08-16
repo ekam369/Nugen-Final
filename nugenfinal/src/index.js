@@ -9,15 +9,14 @@ import Expenditure from './Admin/Expenditure/Expenditure';
 import Courses from './Admin/Courses/Course';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-
 ReactDOM.render(
     <Router>
         <Switch>
             <Route exact path="/" component={App} />
-            <Route path="/assignment" component={AAssignment}></Route>
-            <Route path="/batches" component={Batches}></Route>
-            <Route path="/expenditure" component={Expenditure}></Route>
-            <Route path="/courses" component={Courses}></Route>
+            <Route path="/assignment" component={AAssignment} />
+            <Route path="/batches" component={Batches} />
+            <Route path="/expenditure" component={Expenditure} />
+            <Route path="/courses" component={Courses} />
         </Switch>
     </Router>
     ,document.getElementById('root'));

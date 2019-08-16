@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import Helper from '../../Common/Helper';
 
 class CourseInpContainer extends Component {
-    handleSubmit = (e) =>{
+
+    handleSubmit = (e) => {
         e.preventDefault()
     }
 

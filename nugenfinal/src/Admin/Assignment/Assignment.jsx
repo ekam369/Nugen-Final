@@ -9,6 +9,18 @@ import Head from '../../Head/Head';
 
 class Assignment extends Component {
     
+    state = {
+        assignContShow: true,
+        addTaskShow: false,
+        
+    }
+
+    updateAddTaskCompo = () => { 
+        this.setState( {
+            addTaskShow: true
+        })
+    }
+
     render() { 
         return (  
             <div>
